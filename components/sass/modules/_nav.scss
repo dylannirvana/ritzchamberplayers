@@ -1,0 +1,100 @@
+header #nav {
+	@include clearfix;
+	@include background-image ( linear-gradient(
+		top, darken($navBackground, 20),
+		$navBackground));
+	width: 100%;
+	z-index: 100;
+
+	.navbar {
+		@include container;
+		.brand {
+			@include span(4);
+			float: left;
+			font-weight: $thin;
+			font-family: $headFont;
+			// font-size: 1em;
+			text-align: center;
+			text-transform: uppercase;
+			background: darken($navBrandBg, 5);
+			a {
+				color: $navForeground;
+				text-decoration: none;
+				text-align: center;
+				display: inline-block;
+				padding: 10px;
+				font-size: 1.2em;
+
+				&:hover {
+					font-weight: $normal;
+					background-color: darken($navHover, 5);
+					color: $blue;
+				} //hover
+
+				@include breakpoint(max-width $medium) {
+					font-weight: $thin;
+					font-size: 1em;
+
+				} //breakpoint
+
+				@include breakpoint(max-width $small) {
+					font-weight: $thin;
+					font-size: 1.2em;
+					span {display: none;}
+
+				} //breakpoint
+			} // a
+		} // brand
+		ul {
+			@include span(8 at 4 of 12);
+			li {
+				float: left;
+				a {
+					color: $navForeground;
+					font: $mainFont;
+          			font-weight: $normal;
+					font-size: 1em;
+					display: inline-block;
+					padding: 10px 8px 10px 38px;
+					text-decoration: none;
+
+					// icon styles
+					background-size: 18px;
+					background-repeat: no-repeat;
+					background-position: 12px;
+
+					// REPLACE ICONS WITH FONTAWESOME
+					&.calendar { background-image: url(../images/icons/png/calendar.png)};
+					&.note { background-image: url(../images/icons/png/note.png)};
+					&.book { background-image: url(../images/icons/png/book.png)};
+					&.bell { background-image: url(../images/icons/png/heart.png)};
+					&.thumb { background-image: url(../images/icons/png/thumb.png)};
+					&.microphone { background-image: url(../images/icons/png/microphone.png)};
+
+					&:hover {
+						background-color: darken($navHover, 5);
+						color: $blue;
+					} // hover 
+					@include breakpoint(0 $small) {
+						padding: 10px 18px;
+						&::after {
+							content: '\000a0'; // non breaking space
+							display: block; 
+						}
+						span {display: none; // text disappears
+						} //span
+					} // breakpoint
+
+					@include breakpoint($small $medium) {
+						padding-left: 9px;
+						&.icon {background-image: none;} // icons disappear
+					} // breakpoint
+					&.active {
+						background-color: darken($navActive, 5);
+						color: $light;
+					}
+				} // a
+			} // li
+		} // ul
+	} // navbar
+} // header nav 

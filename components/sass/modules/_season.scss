@@ -1,0 +1,113 @@
+#season {
+  @include background-image(linear-gradient(top, darken($red, 5), $orange));
+  color: $light;
+
+  #{headings()} {
+    color: $light;
+  }
+
+  .heading {
+    h1 {
+      font-size: 3em;
+      font-weight: $thin;
+    }
+  }
+
+  #performance {
+    @include clearfix;
+    section {
+      @include breakpoint($small) {
+        @include span(1 of 3);
+      } 
+      @include breakpoint(450px $small) {
+        &.checklist {
+          @include span(1 of 3 at 2)
+        } 
+      } //breakpoint
+
+
+
+      img {
+        max-width: 600px;
+        position: relative;
+      }
+
+      h2 {
+        color: lighten($light, 5);
+        font-size: 1.3em;
+        line-height: 110%;
+        padding: 10px 0;
+      }//h2
+
+      p {
+        font-size: 1em;
+        line-height: 130%;
+      } //p
+
+      ul {
+        li {
+          list-style: square;
+          margin-left: 10%;
+          line-height: 115%;
+          margin-bottom: 5px;
+        } //li
+        span {
+          font-weight: $normal;
+        }
+      } //ul
+    } //section
+
+    section#calendar {
+      
+      ul {
+        margin: 0;
+        li {
+          list-style: none;
+          border-top: 1px solid $light;
+          padding: 15px 0;
+          margin-left: 0;
+          strong, a {
+            color: $yellow;
+            text-decoration: none;
+          } //strong
+
+          &:first-child {
+            border-top: none;
+          } //first child
+        } //li
+      } //ul
+    } //section#arrivalinfo
+  } //useful info
+
+  #register {
+    background-color: rgba(darken($tan, 0), 1);
+    margin-top: 20px;
+
+    .form {
+      font-size: .8m;
+    }
+
+    .left {
+      @include span(6);
+      padding-left: 40px;
+    }
+    .right {
+      @include span(6);
+
+    }
+
+
+    @include breakpoint($wide) {
+      @include background-image(url('../images/icons/png/.png'));
+      background-size: 240px;
+      background-repeat: no-repeat;
+      background-position: 110% center;
+      padding-right: 280px;
+    } //breakpoint
+    border: 1px solid $light;
+    padding: 20px;
+    @include border-radius(20px);
+
+
+  } //register
+} //hotelinfo

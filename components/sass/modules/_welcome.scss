@@ -1,0 +1,43 @@
+#welcome {
+	@include background-image(linear-gradient(top, $orange, $yellow));
+	article {
+		text-align: left;
+		@include container(90%);
+		@include breakpoint($small) { // min width
+			@include container(33em);
+			padding: 60px 0;
+		} // breakpoint
+	} // article
+
+	h3 {
+		font-weight: $normal;
+		line-height: 100%;
+		color: darken($red, 5);
+		padding: 10px 0;
+	} // h1
+
+	p {
+		font-weight: $normal;
+	}
+
+	.gallery {
+		@include clearfix;
+		img {
+			@include border-radius(20% 0%);
+			display: none;
+
+			@include breakpoint($small) {
+				@include gallery(1 of 4);
+				display: inline;
+				&.hidesm { display: none;}
+			} // breakpoint
+			
+			@include breakpoint($medium) {
+				@include gallery(1 of 5);
+				display: inline;
+				&.hidesm { display: inline;}
+			} // breakpoint
+		} // img
+		padding-bottom: 20px;
+	} // gallery
+} // welcome

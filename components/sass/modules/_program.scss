@@ -1,0 +1,49 @@
+#program {
+	header {
+		margin-bottom: 20px;
+		@include container(90%);
+		@include breakpoint($medium) {
+			@include container;
+			@include pad(1,1);
+		} //breakpoint
+		h1 {
+			color: darken($blue, 0);
+		}
+	} //header
+	.room {
+		@include container(100%);
+		@include pad(1,1);
+
+		@include display-flex(); //flexbox
+		@include align-items(center);
+		@include justify-content(center);
+
+		@include breakpoint($small) {
+			@include pad(5,1);
+		} //small
+		padding: 200px 0; //backup for older browsers
+
+		.content {
+			@include border-radius(10px);
+			background: lighten(rgba($yellow, .6), 20);
+			padding: 20px;
+
+			h1 {
+				color: $blue;
+			} //h1
+
+			p {
+				font-weight: $normal;
+			}
+		} //content
+	} // .room
+	#dream {
+		@include backImage('../images/season/violinSinger.jpg');
+	}
+	#peace {
+		@include backImage('../images/season/smgroup.jpg');
+	}
+	#spring {
+		@include backImage('../images/season/harpsichord.jpg');
+	}
+} //#program

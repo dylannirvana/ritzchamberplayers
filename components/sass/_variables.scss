@@ -1,0 +1,64 @@
+ // Typekit does not have a @import implementation
+// so it is located in the index head
+
+@include border-box-sizing; // from IE
+
+// Susy
+$susy: (
+	columns: 12,
+	container: 60em,
+	gutters: 1/4,
+	gutter-position: inside
+);
+
+// Breakpoint
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
+
+// Color Palettes 
+$red	: #721C1F; // carnegie hall
+$brown	: #8F6036;
+$yellow	: #D7B56C;
+$tan	: #A38D74;
+$purple	: #6F45A3; // -triad
+
+$orange	: #D85C16; // alice tully hall
+$deep	: #742413;
+$aqua	: #008B89; // -complimentary
+
+$blue	: #000D42; // royal albert
+$blood	: #400400;
+$pink	: #B10782; // -analogous
+$green	: #9AB114; // -triad
+
+$light	: #FFFFFF;
+$dark	: #000000;
+
+$backgroundColor	: $light;
+$typeDefault		: $dark;
+$headersub			: $deep;
+
+// Nav
+$navBrandBg			: $blue;
+$navBackground		: $blue;
+$navForeground		: $light;
+$navHover			: $orange;
+$navActive			: $red;
+
+// Font variables
+$fontSans	: brandon-grotesque, Helvetica, sans-serif;
+$fontSerif	: 'kepler-std-extended-display', Times, serif;
+$fontScript	: 'grafolita-script', Times, serif;
+
+$thin		: 200;	
+$normal		: 400;	
+$bold		: 600;	
+$heavy		: 800;	
+
+$headFont	: $thin 1.5em/1.5em $fontSerif;
+$mainFont	: $thin 1em/1.5em $fontSans;
+
+$headColor	: darken($red, 5);
+$fontColor	: lighten($blue, 20);

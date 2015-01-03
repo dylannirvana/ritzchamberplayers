@@ -1,0 +1,130 @@
+#players {
+
+	padding: 0;
+	@include clearfix;
+
+
+
+	// FROM COFFEE SCRIPT
+// 	.artists {
+//   background: $green;
+//   border-top: 20px solid $green;
+//   border-bottom: 50px solid $green;
+
+//   @include clearfix;
+
+//   h1 {
+//     font-size: 3em;
+//     color: darken($green, 20%);
+    
+//   }
+
+//   h2 {
+//     font-size: 1.2em;
+//     color: lighten($green, 10%);
+    
+//   }
+
+//   p {
+//     color: darken($green, 15%);
+//   }
+//  .artistlist {
+//   @include clearfix;
+//   padding-bottom: 20px;
+
+
+//   .item {
+//     min-width: 95px;
+//     color: darken($green, 10%);
+//     width: 18%;
+//     float: left;
+//     padding: 1%;
+//     text-align: center;
+
+//     img {
+//       max-width: 200px;
+//       margin: 0 auto;
+//       display: block;
+//       border-radius: 50%;
+//       width: 100%;
+//       padding: 5%;
+//     }
+//   }
+
+//  }
+
+// }
+	// END COFFEE SCRIPT
+
+	.event {
+		position: relative;
+		display: block;
+		min-width: 120px;
+		height: 100%;
+		@include container(100%);
+		@include span(6 of 12);
+		@include breakpoint($small) {
+			@include span(3 of 12 0);
+		} //breakpoint
+		img {
+			display: block;
+			min-width: 120px;
+		}
+
+		.content {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			background: rgba($dark, .7);
+			padding: 30px;
+			color: $light;
+			line-height: 130%;
+
+			h2 {
+				color: $light;
+				line-height: 1em;
+				font-weight: $thin;
+				font-size: 1em;
+
+			}
+
+			p {
+				padding: 5px 0;
+				display: none;
+			}
+
+			img {
+				display: block;
+			}
+		}
+
+
+	} //event
+
+	#one {
+		@include backImage('/images/players/JudyDines.jpg');
+	} //business
+	#two {
+		@include backImage('../images/players/ann_hobson.jpg');
+	} //weddings
+	#three {
+		@include backImage('../images/players/terrance_patterson.jpg');
+	} //business
+	#four {
+		@include backImage('../images/players/ann_hobson.jpg');
+	} //weddings
+	#five {
+		@include backImage('/images/players/JudyDines.jpg');
+	} //business
+	#six {
+		@include backImage('../images/players/ann_hobson.jpg');
+	} //weddings
+	#seven {
+		@include backImage('../images/players/terrance_patterson.jpg');
+	} //business
+	#eight {
+		@include backImage('../images/players/ann_hobson.jpg');
+	} //weddings
+	
+
+}

@@ -1,0 +1,86 @@
+header {
+  .fullheight {
+    @include backImage('../images/bio/Concert-4.jpg', to right, .8, 0);
+
+    @include display-flex(); //flexbox
+    @include align-items(start);
+    @include justify-content(center);
+
+
+    
+
+    .hgroup {
+    	padding: 100px 0;
+
+    	h1 {
+        color: $light;
+        font-size: 3em;
+        line-height: .8em;
+        @include text-shadow($dark 0 0 20px);
+        text-align: center;
+        margin-bottom: 40px;
+        @include breakpoint($small) {
+        font-size: 5em;    
+        }
+      } //h1
+
+      h2 a {
+        display: block;
+        color: $light;
+        width: 70%;
+        max-width: 520px;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid $light;
+        margin-top: 15px;
+        padding: 10px;
+        background: rgba($dark, .5);
+        font-size: .7em;
+        font-family: $fontSans;
+        font-weight: $thin;
+        letter-spacing: 2px;
+        text-decoration: none;
+        @include breakpoint($small) {
+        font-size: .8em; 
+        
+   
+        }
+
+        &:hover {
+            color: lighten($yellow, 10);
+            background: rgba( darken($red, 10), .5);
+
+        }
+      } //h2
+
+      h3 {
+        text-align: center;
+        padding-bottom: 40px;
+        font-size: 1.4em;
+        color: darken($yellow, 6);
+        @include text-shadow($dark 0 0 20px);
+
+        span {
+            font-style: italic;
+        }
+
+      }
+
+    	p {
+    		text-align: center;
+            font-family: $fontScript;
+            word-spacing: 2px;
+            color: lighten($yellow, 2);
+            font-size: 1.4em;
+            padding-top: 50px;
+            margin-top: 12%;
+
+            img {
+        		padding-top: 6px;
+        		max-width: 50px;
+                
+    		} //img
+    	} // p
+    } // hgroup
+  } // fullheight
+} // header
